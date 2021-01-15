@@ -14,3 +14,8 @@
 
 ### 作业2：
 2：画一张图，展示 Xmx、Xms、Xmn、Meta、DirectMemory、Xss 这些内存参数的关系。
+
+
+**图片地址**
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_01/src/main/resources/jvm/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84-%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0.png
