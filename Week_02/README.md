@@ -7,7 +7,94 @@
 #### GC日志说明
 https://github.com/sofia2013/JAVA-01/blob/main/Week_02/src/main/resources/gc/GC%E6%97%A5%E5%BF%97%E8%AF%B4%E6%98%8E.png
 
+#### 吞吐量对比
+##### 串行   -XX:+UseSerialGC
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:8837
 
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:8432
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:9126
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:9467
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:9369
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseSerialGC GCLogAnalysis
+running...
+finished!all times:8309
+##### 并行   -XX:+UseParallelGC
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+running...
+finished!all times:11021
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+running...
+finished!all times:10823
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+running...
+finished!all times:10758
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+running...
+finished!all times:10834
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseParallelGC GCLogAnalysis
+running...
+finished!all times:10473
+##### 并发CMS   -XX:+UseConcMarkSweepGC
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+running...
+finished!all times:11399
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+running...
+finished!all times:11518
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+running...
+finished!all times:11274
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+running...
+finished!all times:11492
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseConcMarkSweepGC GCLogAnalysis
+running...
+finished!all times:10841
+
+##### G1   -XX:+UseG1GC
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis
+running...
+finished!all times:11610
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis
+running...
+finished!all times:10895
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis
+running...
+finished!all times:10169
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis
+running...
+finished!all times:11739
+
+C:\Users\xianyanyang>java -Xmx1g -Xms1g -XX:+UseG1GC GCLogAnalysis
+running...
+finished!all times:11087
+
+结论：串行的吞吐量较小，后三种实验数据势均力敌。
 
 ### 作业2：
 
