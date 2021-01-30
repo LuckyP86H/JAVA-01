@@ -3,7 +3,7 @@
 
 ### 作业1：
 
-基础代码可以fork: https://github.com/kimmking/JavaCourseCodes02的nio/nio02文件夹下，实现以后，代码提交到 GitHub。
+基础代码可以fork: https://github.com/kimmking/JavaCourseCodes02 的nio/nio02文件夹下，实现以后，代码提交到 GitHub。
 1.（必做）整合你上次作业的 httpclient/okhttp；
 
 #### 说明： 
