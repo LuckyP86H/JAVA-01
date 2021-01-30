@@ -15,8 +15,8 @@
 1.  **HttpHandler** 为代理网关请求核心代码。
 
 #### 访问结果：
-1. 启动HttpServer01单线程的socket程序，使用浏览器访问 http://127.0.0.1:8801/，返回 
+1. 启动HttpServer01单线程的socket程序，使用浏览器访问 http://127.0.0.1:8801/ , 返回 
 hello,nio ，表示请求服务正常；
 
-1. 启动NettyHttpServer的Netty服务，使用浏览器访问http://127.0.0.1:8808/test ，返回
+1. 启动NettyHttpServer的Netty服务，使用浏览器访问http://127.0.0.1:8808/test  , 返回
 hello,nio，网关代理转发成功。
