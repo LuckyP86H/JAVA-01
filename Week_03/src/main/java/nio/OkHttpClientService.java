@@ -9,11 +9,11 @@ import okhttp3.Response;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 基于OkHttp的请求服务(懒汉模式+双检查)
+ * 基于OkHttp的请求服务(懒汉模式+双检查+volatile)
  */
 public class OkHttpClientService {
 
-    private static OkHttpClientService singletonInstance;
+    private static volatile OkHttpClientService singletonInstance;
 
     private static OkHttpClient httpClient;
 
