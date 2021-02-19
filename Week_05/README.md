@@ -29,7 +29,7 @@
 starter 项目源码参见：002/startergen
 starter 引用项目参见：002/starter-use
 
-### 作业2：
+### 作业3：
 
 研究一下 JDBC 接口和数据库连接池，掌握它们的设计和用法：
 
