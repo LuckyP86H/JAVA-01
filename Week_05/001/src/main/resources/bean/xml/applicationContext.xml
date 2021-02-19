@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1.0 使用默认的xml装配Bean-->
+    <bean id="fooRepository" class="bean.xml.repository.FooRepositoryImpl"/>
+
+    <bean id="fooService" class="bean.xml.service.FooServiceImpl">
+        <property name="fooRepository" ref="fooRepository"/>
+    </bean>
+
+    <!--2.0 使用xml装配Bean 实例工厂-->
+    <bean id="fooServiceFactory" class="bean.xml.service.FooServiceFactoryImpl"/>
+    <bean id="fooService2" factory-bean="fooServiceFactory" factory-method="create"/>
+
+    <!--3.0 使用xml装配Bean 静态工厂-->
+    <bean id="fooService3" class="bean.xml.service.StaticFooServiceFactory" factory-method="create"/>
+
+</beans>
