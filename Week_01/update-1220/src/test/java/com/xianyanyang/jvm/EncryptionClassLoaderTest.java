@@ -31,8 +31,8 @@ public class EncryptionClassLoaderTest {
     }
 
     @Test
-    public void loadEncryptionClass_invokeMethod() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class<?> clazz = encryptionClassLoader.findClass(className);
+    public void loadEncryptionClass_invokeMethod() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, ClassNotFoundException {
+        Class<?> clazz = encryptionClassLoader.loadClass(className);
         Method method = clazz.getMethod(methodName);
         method.invoke(clazz.getDeclaredConstructor().newInstance());
     }
