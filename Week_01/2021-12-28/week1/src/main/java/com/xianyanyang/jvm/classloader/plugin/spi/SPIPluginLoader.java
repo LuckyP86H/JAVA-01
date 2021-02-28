@@ -12,7 +12,7 @@ import java.util.ServiceLoader;
  * 30-基于自定义Classloader实现类的动态加载和卸载：需要设计加载和卸载。
  * 30-基于自定义Classloader实现模块化机制：需要设计模块化机制。
  * 30-使用xar作为模块，实现xar动态加载和卸载：综合应用前面的内容。
- * 通过自定义策略模式获取指定的类加载器，通过SPI机制获取指定的服务类
+ * 通过SPI机制获取指定的服务类
  */
 public class SPIPluginLoader implements PluginLoader {
 
