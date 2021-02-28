@@ -62,13 +62,13 @@
 
 其中涉及项目为：
 
-**common-plugin：**抽象接口com.xianyanyang.common.plugin.CommonPlugin所在项目
+**common-plugin**：抽象接口com.xianyanyang.common.plugin.CommonPlugin所在项目
 
-**my-plugin：**实现了com.xianyanyang.common.plugin.CommonPlugin的项目1
+**my-plugin**：实现了com.xianyanyang.common.plugin.CommonPlugin的项目1
 
-**your-plugin：**com.xianyanyang.common.plugin.CommonPlugin的项目2
+**your-plugin**：com.xianyanyang.common.plugin.CommonPlugin的项目2
 
-**week1：**应用系统，引用了common-plugin依赖，PluginLoader接口为插件加载接口
+**week1**：应用系统，引用了common-plugin依赖，PluginLoader接口为插件加载接口
 
 ​	方案1：通过自定义策略模式获取指定的类加载器，通过类加载器反射加载出执行的类
 
