@@ -1,0 +1,111 @@
+Classfile /E:/JAVA-01/Week_01/2021-02-28/week1/src/main/java/com/xianyanyang/jvm/bytecode/Loop.class
+  Last modified 2021-3-2; size 532 bytes
+  MD5 checksum 669ecc2bf8a1e49062a3eed1b3b1fb04
+  Compiled from "Loop.java"
+public class com.xianyanyang.jvm.bytecode.Loop
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #4.#23         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#24         // com/xianyanyang/jvm/bytecode/Loop.result:I
+   #3 = Class              #25            // com/xianyanyang/jvm/bytecode/Loop
+   #4 = Class              #26            // java/lang/Object
+   #5 = Utf8               result
+   #6 = Utf8               I
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               Lcom/xianyanyang/jvm/bytecode/Loop;
+  #14 = Utf8               loop
+  #15 = Utf8               ([I)V
+  #16 = Utf8               age
+  #17 = Utf8               ages
+  #18 = Utf8               [I
+  #19 = Utf8               StackMapTable
+  #20 = Class              #18            // "[I"
+  #21 = Utf8               SourceFile
+  #22 = Utf8               Loop.java
+  #23 = NameAndType        #7:#8          // "<init>":()V
+  #24 = NameAndType        #5:#6          // result:I
+  #25 = Utf8               com/xianyanyang/jvm/bytecode/Loop
+  #26 = Utf8               java/lang/Object
+{
+  public com.xianyanyang.jvm.bytecode.Loop();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_0
+         6: putfield      #2                  // Field result:I
+         9: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lcom/xianyanyang/jvm/bytecode/Loop;
+
+    public void loop(int[] ages) {
+        int[] var2 = ages;
+        int var3 = ages.length;
+
+        for(int var4 = 0; var4 < var3; ++var4) {
+            int age = var2[var4];
+            this.result += age;
+        }
+
+    }
+  public void loop(int[]);
+    descriptor: ([I)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=6, args_size=2
+         0: aload_1  ages
+         1: astore_2
+         2: aload_2
+         3: arraylength
+         4: istore_3
+         5: iconst_0
+         6: istore        4
+         8: iload         4
+        10: iload_3
+        11: if_icmpge     37
+        14: aload_2
+        15: iload         4
+        17: iaload
+        18: istore        5
+        20: aload_0
+        21: dup
+        22: getfield      #2                  // Field result:I
+        25: iload         5
+        27: iadd
+        28: putfield      #2                  // Field result:I
+        31: iinc          4, 1
+        34: goto          8
+        37: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 20
+        line 7: 31
+        line 10: 37
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           20      11     5   age   I
+            0      38     0  this   Lcom/xianyanyang/jvm/bytecode/Loop;
+            0      38     1  ages   [I
+
+      StackMapTable: number_of_entries = 2
+        frame_type = 254 /* append */
+          offset_delta = 8
+          locals = [ class "[I", int, int ]
+        frame_type = 248 /* chop */
+          offset_delta = 28
+}
+SourceFile: "Loop.java"
