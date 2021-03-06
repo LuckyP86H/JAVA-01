@@ -1,0 +1,19 @@
+spring:
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  jpa:
+    show-sql: true
+    database: mysql
+app:
+  datasource:
+    druid:
+      read:
+        url: jdbc:mysql://192.168.0.92/geek4best-pretest-gz?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: rpayplus123
+      write:
+        url: jdbc:mysql://192.168.0.92/geek4best-pretest-hk?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: rpayplus123
