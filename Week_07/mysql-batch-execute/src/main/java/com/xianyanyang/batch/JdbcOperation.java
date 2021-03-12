@@ -12,9 +12,9 @@ import java.util.UUID;
 public class JdbcOperation {
 
     private static String USER_NAME = "root";
-    private static String PASSWORD = "CDjKSzPr3Tti3YO3";
+    private static String PASSWORD = "foo";
     private static String SQL = "INSERT INTO customer_order( id, customer_id,  order_amount ) VALUES (?, '1',  ? )";
-    private static String CONNECTION = "jdbc:mysql://rm-uf6t770o2i7z559kkzo.mysql.rds.aliyuncs.com/learn?&rewriteBatchedStatements=true&useCompression=true&useUnicode=true&characterEncoding=utf8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&autoReconnect=true&useSSL=false";
+    private static String CONNECTION = "jdbc:mysql://rm-foo.mysql.rds.aliyuncs.com/learn?&rewriteBatchedStatements=true&useCompression=true&useUnicode=true&characterEncoding=utf8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&autoReconnect=true&useSSL=false";
 
     public static void batchInsertRows(int count) {
         try (Connection conn = DriverManager.getConnection(CONNECTION, USER_NAME, PASSWORD);
