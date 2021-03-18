@@ -4,10 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xianyanyang</groupId>
+    <parent>
+        <groupId>com.xianyanyang</groupId>
+        <artifactId>rpc</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
     <artifactId>rpc-domain-api</artifactId>
     <version>1.0.0</version>
-    <name>Rpc Domain Api</name>
     <description>业务领域接口API</description>
 
 </project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rpc</artifactId>
+        <groupId>com.xianyanyang</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <description>基于Socket编程通信的RPC框架</description>
+
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <artifactId>rpc-socket</artifactId>
+
+    <modules>
+        <module>rpc-socket-consumer</module>
+        <module>rpc-socket-provider</module>
+        <module>rpc-socket-core</module>
+    </modules>
+
+
+</project>
