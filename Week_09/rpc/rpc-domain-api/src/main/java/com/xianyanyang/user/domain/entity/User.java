@@ -1,13 +1,19 @@
 package com.xianyanyang.user.domain.entity;
 
-import java.io.Serializable;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 /**
  * 用户实体
  */
-public class User implements Serializable {
+@Data
+@Accessors(chain = true)
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
+public class User {
 
-    private static final long serialVersionUID = 1L;
 
     /**
      * 用户标识

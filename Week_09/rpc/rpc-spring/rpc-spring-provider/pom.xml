@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.xianyanyang</groupId>
+        <artifactId>rpc-spring</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>rpc-spring-provider</artifactId>
+    <version>1.0.0</version>
+
+    <dependencies>
+
+        <!--业务领域模型api-->
+        <dependency>
+            <groupId>com.xianyanyang</groupId>
+            <artifactId>rpc-domain-api</artifactId>
+        </dependency>
+        <!--业务领域模型api-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.xianyanyang</groupId>
+            <artifactId>rpc-spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

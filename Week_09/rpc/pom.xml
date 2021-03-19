@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
     <groupId>com.xianyanyang</groupId>
     <artifactId>rpc</artifactId>
     <version>1.0.0</version>
@@ -16,8 +17,10 @@
     </properties>
 
     <modules>
-        <module>rpc-socket</module>
         <module>rpc-domain-api</module>
+        <module>rpc-socket</module>
+        <module>rpc-spring</module>
+        <module>rpc-spring-aop</module>
     </modules>
 
     <dependencies>
@@ -58,6 +61,11 @@
             <version>1.6.21</version>
         </dependency>
         <!-- 支持自动生成setter,getter -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
 
 
     </dependencies>
