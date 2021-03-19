@@ -1,4 +1,3 @@
-
 ## 学习笔记
 
 ### 作业1：
@@ -12,18 +11,22 @@
 * 使用xml装配Bean 静态工厂 Instantiation with a static factory method 参见单元测试 bean.xml.FooServiceImplTest 
 
 #### 通过annotation装配bean
+
 参见单元测试 bean.annotation.FeeServiceImplTest
 
 
 #### 通过java config 装配bean
+
 参见单元测试bean.config.FuuServiceTest
 
 
 #### 通过BeanRegister注册bean
+
 参见单元测试 bean.beanregister.FiiBeanRegisterTest
 
 
 ### 作业2：
+
 给前面课程提供的 Student/Klass/School 实现自动配置和 Starter。
 
 starter 项目源码参见：002/startergen
@@ -38,3 +41,11 @@ starter 引用项目参见：002/starter-use
 3. 配置 Hikari 连接池，改进上述操作。提交代码到 Github。
 
 参见单元测试：001/jdbc/JdbcTest 和 001/jdbc/HikariCpDataSourceJdbcTest
+
+### 作业4：
+
+1、（选做）使 Java 里的动态代理，实现一个简单的 AOP。
+
+源码参见 https://github.com/sofia2013/JAVA-01/tree/main/Week_05/aop
+
+测试参见 https://github.com/sofia2013/JAVA-01/blob/main/Week_05/aop/src/test/java/com/xianyanyang/aop/proxy/DynamicProxyITest.java
