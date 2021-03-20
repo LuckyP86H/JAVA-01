@@ -16,7 +16,7 @@
 
 客户端代理：基于Java 的 InvocationHandler进行动态代理实现了远程调用。
 
-**3、rpc-spring 基于Spring框架的HTTP为通信协议的RPC建议框架**
+**3、rpc-spring 基于Spring框架的HTTP为通信协议的RPC简易框架**
 
 代码地址：https://github.com/sofia2013/JAVA-01/tree/main/Week_09/rpc/rpc-spring
 
