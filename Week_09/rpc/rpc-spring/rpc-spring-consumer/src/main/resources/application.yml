@@ -1,0 +1,5 @@
+rpc:
+  consumer:
+    protocol: restTemplate
+    loadbalance: random
+    proxy: cglib
