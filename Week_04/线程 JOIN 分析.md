@@ -30,7 +30,7 @@ public class MyThread extends Thread {
 }
 ```
 
-**注意：run()方法中，同步块枷锁的是this对象，也就是线程对象自己。**
+**注意：run()方法中，同步块加锁的是this对象，也就是线程对象自己。**
 
 ```java
 @Test
