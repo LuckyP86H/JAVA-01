@@ -1,0 +1,8 @@
+guava:
+  cache:
+    config:
+      #同时写缓存的线程数
+      concurrencyLevel: 4
+      initialCapacity: 1000
+      expireAfterWrite: 5
+      maximumSize: 1000
