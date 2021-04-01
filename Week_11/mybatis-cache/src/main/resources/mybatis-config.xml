@@ -24,7 +24,7 @@
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://ryplus-db.mysql.rds.aliyuncs.com:3306/learn"/>
                 <property name="username" value="root"/>
-                <property name="password" value="CDjKSzPr3Tti3YO3"/>
+                <property name="password" value=""/>
             </dataSource>
         </environment>
     </environments>
