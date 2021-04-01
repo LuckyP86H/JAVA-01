@@ -7,9 +7,12 @@ mybatis-cache
 
 测试地址：
 
+解析文章：
 
-1、（选做）使用spring或guava cache，实现业务数据的查询缓存。
+解析md：
+
+2、（选做）使用spring或guava cache，实现业务数据的查询缓存。
 
 源码地址：https://github.com/sofia2013/JAVA-01/tree/main/Week_11/cache
 
-测试地址： https://github.com/sofia2013/JAVA-01/blob/main/Week_11/cache/src/test/java/com/xianyanyang/domain/service/impl/UserServiceImplTest.java 
+测试地址： https://github.com/sofia2013/JAVA-01/blob/main/Week_11/cache/src/test/java/com/xianyanyang/domain/service/impl/UserServiceImplTest.java  
