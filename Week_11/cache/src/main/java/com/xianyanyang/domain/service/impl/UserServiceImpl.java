@@ -4,6 +4,7 @@ import com.xianyanyang.domain.entity.User;
 import com.xianyanyang.domain.repository.UserRepository;
 import com.xianyanyang.domain.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -31,9 +32,30 @@ public class UserServiceImpl implements UserService {
         return userRepository.findUserById(id);
     }
 
+    /**
+     * 备注：
+     * @CachePut
+     * 标注的方法在执行前不会去检查缓存中是否存在之前执行过的结果
+     * 而是每次都会执行该方法，并将执行结果以键值对的形式存入指定的缓存中。
+     * @param id
+     * @param name
+     * @return
+     */
     @CachePut(value = "user", key = "#id")
     @Override
-    public User updateUserName(String id) {
-        return userRepository.updateUserName(id);
+    public User updateUserName(String id, String name) {
+        return userRepository.updateUserName(id, name);
+    }
+
+    /**
+     * @CacheEvict
+     * 用来标注在需要清除缓存元素的方法或类上。
+     * 当标记在一个类上时表示其中所有的方法的执行都会触发缓存的清除操作。
+     * @param id
+     */
+    @CacheEvict(value = "user", key = "#id")
+    @Override
+    public void deleteUserById(String id) {
+        userRepository.deleteUserById(id);
     }
 }

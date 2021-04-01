@@ -6,5 +6,7 @@ public interface UserService {
 
     User findUserById(String userId);
 
-    User updateUserName(String userId);
+    User updateUserName(String userId,String name);
+
+    void deleteUserById(String userId);
 }

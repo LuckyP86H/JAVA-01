@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xianyanyang.mybatis.mapper.UserMapper">
+
+    <cache readOnly="false"/>
+
+    <resultMap id="User" type="com.xianyanyang.mybatis.entity.User">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+    </resultMap>
+
+    <select id="listAll"  resultMap="User">
+      SELECT ID,NAME FROM USER
+    </select>
+
+    <select id="findById" flushCache="true" parameterType="java.lang.String" resultMap="User">
+      SELECT ID,NAME FROM USER WHERE ID=#{id, jdbcType=VARCHAR}
+    </select>
+
+    <select id="findUser" parameterType="java.lang.String" resultMap="User">
+      SELECT ID,NAME FROM USER WHERE ID=#{id, jdbcType=VARCHAR}
+    </select>
+
+    <update id="changeUserName">
+      UPDATE USER SET NAME=#{name, jdbcType=VARCHAR} WHERE ID=#{id, jdbcType=VARCHAR}
+  </update>
+
+</mapper>

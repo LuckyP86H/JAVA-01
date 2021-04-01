@@ -46,7 +46,15 @@
             <artifactId>spring-context-support</artifactId>
             <version>4.3.5.RELEASE</version>
         </dependency>
+
         <!--guava cache-->
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.4</version>
+        </dependency>
+
 
     </dependencies>
 

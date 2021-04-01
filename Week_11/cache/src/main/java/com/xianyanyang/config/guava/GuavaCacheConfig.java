@@ -3,7 +3,6 @@ package com.xianyanyang.config.guava;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.CacheManager;
@@ -20,16 +19,16 @@ public class GuavaCacheConfig {
 
     @Bean(value = "cacheBuilder")
     public CacheBuilder<Object, Object> cacheBuilder(@Autowired GuavaProperties guavaProperties) {
-       return CacheBuilder.newBuilder()
+        return CacheBuilder.newBuilder()
                 //同时写缓存的线程数
-                .concurrencyLevel(8)
+                .concurrencyLevel(guavaProperties.getConcurrencyLevel())
                 //写入后多久缓存失效
-                .expireAfterWrite(2, TimeUnit.SECONDS)
+                .expireAfterWrite(guavaProperties.getExpireAfterWrite(), TimeUnit.SECONDS)
                 //访问后多久缓存失效
-                .expireAfterAccess(1, TimeUnit.SECONDS)
+                .expireAfterAccess(guavaProperties.getExpireAfterAccess(), TimeUnit.SECONDS)
                 //设置缓存容量
-                .initialCapacity(10)
-                .maximumSize(100)
+                .initialCapacity(guavaProperties.getInitialCapacity())
+                .maximumSize(guavaProperties.getMaximumSize())
                 //设置要统计缓存的命中率
                 .recordStats()
                 //设置缓存移除监听器
