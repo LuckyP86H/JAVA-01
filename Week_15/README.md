@@ -25,6 +25,7 @@
     优化：STW,YoungGC,FullGC,参数,分代回收
     
  学习过程总结：
+ ![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
 1、[什么是可回收垃圾回收对象](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%AF%B9%E8%B1%A1%EF%BC%9F.md)
 
@@ -44,6 +45,7 @@
 	内核将缓冲区数据拷贝到用户空间缓冲区；
 
 2、对于IO的这一块内容，理解起来相对困难，以下是自己对于IO多路复用的推演的理解，关于Netty的知识点，暂时没有罗列。
+![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/socket.jpg)
 
 1、[IO多路复用推演](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8E%A8%E6%BC%94.md)
 
@@ -59,6 +61,9 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 2、线程池
   核心要素：核心线程+队列+非核心队列+拒绝策略+超时时间
   自带的线程池类型：newFixedThreadPool（队列无限制，OOM）、newSingleThreadExecutor（单线程，性能低）、newCachedThreadPool（非核心线程无限制，CPU打满）、自定义线程池
+  
+![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%BB%BB%E5%8A%A1%E6%8F%90%E4%BA%A4%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+  
 3、并发编程
 
 1）锁：Lock（对比synchronized和Lock的区别）、ReentrantLock（默认为非公平锁，可以设置为公平锁）、Condition（模拟消费者生产者模式中的指定线程调度）、AQS（state+CAS自旋锁+队列）
@@ -84,6 +89,8 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 3、[线程JOIN分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20JOIN%20%E5%88%86%E6%9E%90.md)
 
 4、[对象头分析以及锁的状态](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20-%20%E5%AF%B9%E8%B1%A1%E5%A4%B4%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E9%94%81%E7%8A%B6%E6%80%81.md)
+
+![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6(11).png)
 
 5、[多线程和并发](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind)
 
@@ -115,6 +122,7 @@ mybatis
 1、[Mybatis 缓存](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Mybatis%20%E7%BC%93%E5%AD%98.md)
 
 2、[HashMap](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/HashMap.md)
+![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E8%B4%9F%E8%BD%BD%E5%9B%A0%E5%AD%90%E5%92%8Chash%E5%86%B2%E7%AA%81%E7%8E%87.png)
 
 
 ## MySQL 数据库和 SQL
@@ -135,6 +143,8 @@ MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC�
 7、读写分离：主从复制（异步复制、半同步复制）
 
 学习过程总结：
+
+![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/MySQL%E9%A1%B5%E7%BB%93%E6%9E%84.png)
 
 1、[SQL事务隔离级别](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md)
 
