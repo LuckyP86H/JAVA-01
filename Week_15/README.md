@@ -26,17 +26,11 @@
     
  学习过程总结：
 
-1、什么是可回收垃圾回收对象
+1、[什么是可回收垃圾回收对象](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%AF%B9%E8%B1%A1%EF%BC%9F.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%AF%B9%E8%B1%A1%EF%BC%9F.md
+2、[JVM和类](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JVM%E5%92%8C%E7%B1%BB.md)
 
-2、JVM和类
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JVM%E5%92%8C%E7%B1%BB.md
-
-3、AVA字节码文件分析
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JAVA%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90.md
+3、[JAVA字节码文件分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JAVA%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90.md)
 
 一直觉得JVM的学习是一个难点，这几年好几次想要去走第一步，通过了这次的学习，收货特别大。了解了一个java文件->class文件->Class对象->Class实例对象的演化和生命周期，了解了通过编译为字节码这个中间层+JVM虚拟机将字节码编译为不同操作系统指令实现了跨平台的优雅之处，还有很多种种JVM原理知识如上列出来的，都是我在这几个月学习到的，但是还有很多需要后续扩展的，1）很多底层基本原理的细节 2）JVM的调优实践，GC日志的分析实战。
 
@@ -51,9 +45,7 @@ https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%
 
 2、对于IO的这一块内容，理解起来相对困难，以下是自己对于IO多路复用的推演的理解，关于Netty的知识点，暂时没有罗列。
 
-1、IO多路复用推演
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8E%A8%E6%BC%94.md
+1、[IO多路复用推演](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8E%A8%E6%BC%94.md)
 
 
 ## 并发编程
@@ -85,25 +77,15 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 
  学习过程总结：
 
-1、ReentrantLock源代码分析
+1、[ReentrantLock源代码分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/ReentrantLock%20JDK1.8%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/ReentrantLock%20JDK1.8%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90.md
+2、[wait & notify](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/wait%20%26%20notify.md)
 
-2、wait & notify
+3、[线程JOIN分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20JOIN%20%E5%88%86%E6%9E%90.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/wait%20%26%20notify.md
+4、[对象头分析以及锁的状态](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20-%20%E5%AF%B9%E8%B1%A1%E5%A4%B4%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E9%94%81%E7%8A%B6%E6%80%81.md)
 
-3、线程JOIN分析
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20JOIN%20%E5%88%86%E6%9E%90.md
-
-4、对象头分析以及锁的状态
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20-%20%E5%AF%B9%E8%B1%A1%E5%A4%B4%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E9%94%81%E7%8A%B6%E6%80%81.md
-
-5、多线程和并发
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind
+5、[多线程和并发](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind)
 
 **并发编程这一块和JVM是花时间最多的内容，因为抽象+知识点多+日常使用较少，但是我深知想要做高级编程工作，并发编程是入门知识，包括后续中间件和框架的学习，涉及到并发编程中的线程、锁等种种的基础知识，打牢基础，路虽漫漫却定是光明大道。**
 
@@ -116,26 +98,23 @@ https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%
 
 3、生态：
 
-	Spring boot ：加速Web开发的依赖Spring框架的脚手架（约定大于配置，管理依赖）
-	
-	Spring Cloud：提供分布式开发各种分布式组件的集成
+Spring boot ：加速Web开发的依赖Spring框架的脚手架（约定大于配置，管理依赖）
+
+Spring Cloud：提供分布式开发各种分布式组件的集成
 
 4、ORM框架：
-	spring-data-jpa:基于 hibernate
 
-	mybatis 
+spring-data-jpa:基于 hibernate
+
+mybatis 
 
 5、Collection框架：Map、Collection
 
  学习过程总结：
 
-1、Mybatis 缓存
+1、[Mybatis 缓存](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Mybatis%20%E7%BC%93%E5%AD%98.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Mybatis%20%E7%BC%93%E5%AD%98.md
-
-2、HashMap
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/HashMap.md
+2、[HashMap](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/HashMap.md)
 
 
 ## MySQL 数据库和 SQL
@@ -146,32 +125,24 @@ https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%
 4、优化（索引优化、MySQL优化）
 5、事务：
 
-	ACID：原子性、一致性、隔离性、持久性
-	
-	隔离级别：未提交读（脏读、幻读、重复读）、已提交读（重复读、幻读）、不可重复读（幻读，但是在mysql中通过临键锁解决了，不存在幻读）、串行读
-	
-	MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC没办法解决不同事务之间写写冲突的问题，如果要解决可以通过两种方式，应用层面做到并发控制，串行写，不让数据库层面出现并发写；还有一种就是在数据库层面显示加锁；
+ACID：原子性、一致性、隔离性、持久性
+
+隔离级别：未提交读（脏读、幻读、重复读）、已提交读（重复读、幻读）、不可重复读（幻读，但是在mysql中通过临键锁解决了，不存在幻读）、串行读
+
+MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC没办法解决不同事务之间写写冲突的问题，如果要解决可以通过两种方式，应用层面做到并发控制，串行写，不让数据库层面出现并发写；还有一种就是在数据库层面显示加锁；
 
 6、日志文件：undolog（事务的原子性保证、MVCC的实现关键点之一）、 redolog（保证了mysql数据的持久性，采用了内部的XA两阶段提交）、 binlog（主从复制）
 7、读写分离：主从复制（异步复制、半同步复制）
 
- 学习过程总结：
+学习过程总结：
 
-1、MySQL事务隔离级别
+1、[SQL事务隔离级别](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md
+2、[MVCC多版本并发控制](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MVCC%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6.md)
 
-2、MVCC多版本并发控制
+3、[MySQL主从复制原理](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86.md)
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MVCC%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6.md
-
-3、MySQL主从复制原理
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86.md
-
-4、数据库事务模型.
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E6%A8%A1%E5%9E%8B.md
+4、[数据库事务模型](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E6%A8%A1%E5%9E%8B.md)
 
 以上列出的知识点都是重点进行学习的，特别是索引+ACID+MVCC+各种log+主从复制机制+锁，可以对主键索引做出推演。
 
@@ -220,9 +191,8 @@ https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%
 服务治理：注册中心+路由+熔断限流+配置中心
 
 学习过程总结：
-1、RPC基本原理
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/RPC%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86.md
+1、[RPC基本原理](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/RPC%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86.md)
 
 
 ## 分布式缓存
@@ -257,14 +227,10 @@ redis的基础数据：string、hash、list（链表）、set（去重）、sort
 日常开发过程中，使用到缓存的地方有CDN、反向代理、Redis+Spring boot，针对Redis数据的一些高级功能。
 
 学习过程总结：
-1、Redis主从复制.
 
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.md
+1、[Redis主从复制](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.md)
 
-2、Redis持久化原理
-
-https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8E%9F%E7%90%86.md
-
+2、[Redis持久化原理](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8E%9F%E7%90%86.md)
 
 
 ## 分布式消息队列
