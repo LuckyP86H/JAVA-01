@@ -1,4 +1,4 @@
-# 【原创】 wait & notify 
+# wait & notify 
 
 ## 线程同步
 
