@@ -7,10 +7,12 @@
 2、字节码文件分析
 	字节码文件组成：版本+常量池+类信息+方法信息+属性信息  
 	操作数栈运行时过程：栈帧主要包括 操作数栈+本地变量表
+
 3、类生命周期（加载、连接、初始化）：
    加载：通过类加载器将class文件加载进入JVM内存方法区，并在堆中创建一个Class类型的对象（注意，不是Class实例对象）
    连接：校验、解析字节码文件内容，并给Class对象中的静态变量和常量赋默认值，引用连接
    初始化：构造+静态变量和常量初始化
+
 4、类加载器：双亲委派模型+自定义类加载器（实现通过class文件、归档文件、网络地址+加解密方式 加载类）
 5、JMM JVM内存模型（
 	包括：线程栈+堆+程序计数器+本地方法栈+方法区
@@ -21,6 +23,20 @@
 	垃圾清除算法：标记清除+标记压缩+标记复制
 	GC分类：串行（Serials，单GC线程）+并行（Parallel，多GC线程）+并发（CMS，工作线程+GC线程）+分区（G1，增量回收）
     优化：STW,YoungGC,FullGC,参数,分代回收
+    
+ 学习过程总结：
+
+1、什么是可回收垃圾回收对象
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%AF%B9%E8%B1%A1%EF%BC%9F.md
+
+2、JVM和类
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JVM%E5%92%8C%E7%B1%BB.md
+
+3、AVA字节码文件分析
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JAVA%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90.md
 
 一直觉得JVM的学习是一个难点，这几年好几次想要去走第一步，通过了这次的学习，收货特别大。了解了一个java文件->class文件->Class对象->Class实例对象的演化和生命周期，了解了通过编译为字节码这个中间层+JVM虚拟机将字节码编译为不同操作系统指令实现了跨平台的优雅之处，还有很多种种JVM原理知识如上列出来的，都是我在这几个月学习到的，但是还有很多需要后续扩展的，1）很多底层基本原理的细节 2）JVM的调优实践，GC日志的分析实战。
 
@@ -35,6 +51,9 @@
 
 2、对于IO的这一块内容，理解起来相对困难，以下是自己对于IO多路复用的推演的理解，关于Netty的知识点，暂时没有罗列。
 
+1、IO多路复用推演
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8E%A8%E6%BC%94.md
 
 
 ## 并发编程
@@ -64,8 +83,29 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 
 6、全局计数。
 
-**并发编程这一块和JVM是花时间最多的内容，因为抽象+知识点多+日常使用较少，但是我深知想要做高级编程工作，并发编程是入门知识，包括后续中间件和框架的学习，涉及到并发编程中的线程、锁等种种的基础知识，打牢基础，路虽漫漫却定是光明大道。**
+ 学习过程总结：
 
+1、ReentrantLock源代码分析
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/ReentrantLock%20JDK1.8%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90.md
+
+2、wait & notify
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/wait%20%26%20notify.md
+
+3、线程JOIN分析
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20JOIN%20%E5%88%86%E6%9E%90.md
+
+4、对象头分析以及锁的状态
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20-%20%E5%AF%B9%E8%B1%A1%E5%A4%B4%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E9%94%81%E7%8A%B6%E6%80%81.md
+
+5、多线程和并发
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind
+
+**并发编程这一块和JVM是花时间最多的内容，因为抽象+知识点多+日常使用较少，但是我深知想要做高级编程工作，并发编程是入门知识，包括后续中间件和框架的学习，涉及到并发编程中的线程、锁等种种的基础知识，打牢基础，路虽漫漫却定是光明大道。**
 
 
 ## Spring 和 ORM 等框架
@@ -76,16 +116,26 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 
 3、生态：
 
-​	Spring boot ：加速Web开发的依赖Spring框架的脚手架（约定大于配置，管理依赖）
-
-​	Spring Cloud：提供分布式开发各种分布式组件的集成
+	Spring boot ：加速Web开发的依赖Spring框架的脚手架（约定大于配置，管理依赖）
+	
+	Spring Cloud：提供分布式开发各种分布式组件的集成
 
 4、ORM框架：
+	spring-data-jpa:基于 hibernate
 
-​	spring-data-jpa:基于 hibernate
+	mybatis 
 
-​    mybatis
+5、Collection框架：Map、Collection
 
+ 学习过程总结：
+
+1、Mybatis 缓存
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Mybatis%20%E7%BC%93%E5%AD%98.md
+
+2、HashMap
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/HashMap.md
 
 
 ## MySQL 数据库和 SQL
@@ -96,24 +146,38 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 4、优化（索引优化、MySQL优化）
 5、事务：
 
-​	ACID：原子性、一致性、隔离性、持久性
-
-​	隔离级别：未提交读（脏读、幻读、重复读）、已提交读（重复读、幻读）、不可重复读（幻读，但是在mysql中通过临键锁解决了，不存在幻读）、串行读
-
-​	MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC没办法解决不同事务之间写写冲突的问题，如果要解决可以通过两种方式，应用层面做到并发控制，串行写，不让数据库层面出现并发写；还有一种就是在数据库层面显示加锁；
+	ACID：原子性、一致性、隔离性、持久性
+	
+	隔离级别：未提交读（脏读、幻读、重复读）、已提交读（重复读、幻读）、不可重复读（幻读，但是在mysql中通过临键锁解决了，不存在幻读）、串行读
+	
+	MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC没办法解决不同事务之间写写冲突的问题，如果要解决可以通过两种方式，应用层面做到并发控制，串行写，不让数据库层面出现并发写；还有一种就是在数据库层面显示加锁；
 
 6、日志文件：undolog（事务的原子性保证、MVCC的实现关键点之一）、 redolog（保证了mysql数据的持久性，采用了内部的XA两阶段提交）、 binlog（主从复制）
 7、读写分离：主从复制（异步复制、半同步复制）
 
+ 学习过程总结：
+
+1、MySQL事务隔离级别
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md
+
+2、MVCC多版本并发控制
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MVCC%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6.md
+
+3、MySQL主从复制原理
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86.md
+
+4、数据库事务模型.
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E6%A8%A1%E5%9E%8B.md
+
 以上列出的知识点都是重点进行学习的，特别是索引+ACID+MVCC+各种log+主从复制机制+锁，可以对主键索引做出推演。
-
-
 
 ## 分库分表
 
 目前针对分库分表的实践没有参与过，所以只是从概念上去了解了什么时候需要做分库分表以及分库分表过程中需要考虑的事情，针对互联网的架构的演进做了一个流程图，分库分表也是其中一部分。
-
-
 
 ## RPC和微服务
 
@@ -150,13 +214,15 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 	5) 使用反射或者差找Bean单例池等方式在服务端查找到Class
 
 4、微服务
+概念：服务自治、HTTP协议、数据库分离、康威定理、不规定技术栈、自动化CI/CD基础设施、Devops
 
-​	概念：服务自治、HTTP协议、数据库分离、康威定理、不规定技术栈、自动化CI/CD基础设施、Devops
+框架：Spring Cloud
+服务治理：注册中心+路由+熔断限流+配置中心
 
-​	框架：Spring Cloud
+学习过程总结：
+1、RPC基本原理
 
-​    服务治理：注册中心+路由+熔断限流+配置中心
-
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/RPC%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86.md
 
 
 ## 分布式缓存
@@ -180,8 +246,9 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 缓存雪崩（大批量缓存数据失效）：设置不同的key的过期时间
 
 8、中间件产品
-	redis：Redis 是开源免费的高性能key-value分布式内存数据库，是基于内存且支持持久化的NOSQL数据库
-	redis特别快的原因：1）内存操作2）指令执行为单线程，无需将时间小号在线程创建、调度等事情上3）采用了非阻塞的IO多路复用机制（事件驱动）
+redis：Redis 是开源免费的高性能key-value分布式内存数据库，是基于内存且支持持久化的NOSQL数据库
+
+redis特别快的原因：1）内存操作2）指令执行为单线程，无需将时间小号在线程创建、调度等事情上3）采用了非阻塞的IO多路复用机制（事件驱动）
 
 redis的基础数据：string、hash、list（链表）、set（去重）、sortedSet
 
@@ -189,20 +256,31 @@ redis的基础数据：string、hash、list（链表）、set（去重）、sort
 
 日常开发过程中，使用到缓存的地方有CDN、反向代理、Redis+Spring boot，针对Redis数据的一些高级功能。
 
+学习过程总结：
+1、Redis主从复制.
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6.md
+
+2、Redis持久化原理
+
+https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Redis%E6%8C%81%E4%B9%85%E5%8C%96%E5%8E%9F%E7%90%86.md
+
+
+
 ## 分布式消息队列
 
 1、系统间通信方式：目前主流的为 数据库+文件+Socket+RPC+消息
+
 2、消息中间件通用模型：procuder+MQ(exchange->queue)+consumer 
+
 3、消息队列通信的特性： 解耦+异步+削峰填谷+内置各种场景的高效通信机制（以rabbitmq为例：点对点+workQueue+发布订阅+路由+主题）+延时队列（TTL+DeadQueue）
-4、消息的可靠性保证：
-	确认机制
-	分布式事务
-	服务质量（最多发一次+最少发一次+有且仅有一次）
-	服务幂等
-	消息重试
-	死信队列
+
+4、消息的可靠性保证：确认机制、分布式事务、服务质量（最多发一次+最少发一次+有且仅有一次）、服务幂等、消息重试、死信队列
+
 5、业界主流的消息中间件：RabbitMQ、ActiveMQ、Kafka、RocketMQ
+
 6、与Spring的整合
+
 7、业务场景：电商系统微服务解耦、日志收集、秒杀系统削峰限流、订单过期优惠券过期等延时处理、汇率同步订单状态同步等有规律的定时同步。
 
 日常业务开发中，用到RabbitMq较多，但是在日常工作中针对消息的可靠性这一块没有做多过的考虑，是后续可以改进的地方。
