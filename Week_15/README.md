@@ -2,10 +2,10 @@
 
 ## JVM
 
-1、JVM的组成和特征：支持跨平台+内存自动回收GC
+1、JVM的组成和特征：支持跨平台、内存自动回收GC；
 
 2、字节码文件分析
-	字节码文件组成：版本+常量池+类信息+方法信息+属性信息  
+	字节码文件组成：版本、常量池、类信息、方法信息、属性信息；  
 	操作数栈运行时过程：栈帧主要包括 操作数栈+本地变量表
 
 3、类生命周期（加载、连接、初始化）：
@@ -25,7 +25,22 @@
     优化：STW,YoungGC,FullGC,参数,分代回收
     
  学习过程总结：
- ![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/Java%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%89%98%E5%8A%A0%E8%BD%BD%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+
+1）JVM内存模型
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84-%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0.png" alt="JVM内存模型" style="zoom: 25%;" />
+
+2）JVM组成
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/JVM%E7%BB%84%E6%88%90.jpg" style="zoom: 25%;" />
+
+3）Java虚拟机类加载器双亲委托加载流程图
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6.jpg" style="zoom: 25%;" />
+
+3）对象头结构
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E5%AF%B9%E8%B1%A1%E5%A4%B4.jpg" style="zoom:33%;" />
 
 1、[什么是可回收垃圾回收对象](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%AF%B9%E8%B1%A1%EF%BC%9F.md)
 
@@ -33,7 +48,7 @@
 
 3、[JAVA字节码文件分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/JAVA%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%88%86%E6%9E%90.md)
 
-一直觉得JVM的学习是一个难点，这几年好几次想要去走第一步，通过了这次的学习，收货特别大。了解了一个java文件->class文件->Class对象->Class实例对象的演化和生命周期，了解了通过编译为字节码这个中间层+JVM虚拟机将字节码编译为不同操作系统指令实现了跨平台的优雅之处，还有很多种种JVM原理知识如上列出来的，都是我在这几个月学习到的，但是还有很多需要后续扩展的，1）很多底层基本原理的细节 2）JVM的调优实践，GC日志的分析实战。
+一直觉得JVM的学习是一个难点，这几年好几次想要去走第一步，通过了这次的学习，收货特别大。了解了一个java文件->class文件->Class对象->Class实例对象的演化和生命周期，了解了通过编译为字节码这个中间层+JVM虚拟机将字节码编译为不同操作系统指令实现了跨平台的优雅之处，还有很多种种JVM原理知识如上列出来的，都是我在这几个月学习到的，但是还有很多需要后续扩展的：1）很多底层基本原理的细节 2）JVM的调优实践，GC日志的分析实战。
 
 **离技术本质不断靠近是IT从业人员的必修课。**
 
@@ -45,7 +60,12 @@
 	内核将缓冲区数据拷贝到用户空间缓冲区；
 
 2、对于IO的这一块内容，理解起来相对困难，以下是自己对于IO多路复用的推演的理解，关于Netty的知识点，暂时没有罗列。
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/socket.jpg)
+
+学习总结：
+
+1）socket通信模型
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/socket.jpg" style="zoom:80%;" />
 
 1、[IO多路复用推演](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8E%A8%E6%BC%94.md)
 
@@ -61,9 +81,7 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 2、线程池
   核心要素：核心线程+队列+非核心队列+拒绝策略+超时时间
   自带的线程池类型：newFixedThreadPool（队列无限制，OOM）、newSingleThreadExecutor（单线程，性能低）、newCachedThreadPool（非核心线程无限制，CPU打满）、自定义线程池
-  
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%BB%BB%E5%8A%A1%E6%8F%90%E4%BA%A4%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
-  
+
 3、并发编程
 
 1）锁：Lock（对比synchronized和Lock的区别）、ReentrantLock（默认为非公平锁，可以设置为公平锁）、Condition（模拟消费者生产者模式中的指定线程调度）、AQS（state+CAS自旋锁+队列）
@@ -82,6 +100,18 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 
  学习过程总结：
 
+1）线程状态迁移图
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E8%BF%81%E7%A7%BB%E5%9B%BE.jpg" style="zoom:33%;" />
+
+2）线程池任务提交流程图
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%BB%BB%E5%8A%A1%E6%8F%90%E4%BA%A4%E6%B5%81%E7%A8%8B.jpg" style="zoom: 25%;" />
+
+3）锁升级过程
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E9%94%81%E5%8D%87%E7%BA%A7%E8%BF%87%E7%A8%8B.jpg" style="zoom:33%;" />
+
 1、[ReentrantLock源代码分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/ReentrantLock%20JDK1.8%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90.md)
 
 2、[wait & notify](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/wait%20%26%20notify.md)
@@ -89,8 +119,6 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 3、[线程JOIN分析](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20JOIN%20%E5%88%86%E6%9E%90.md)
 
 4、[对象头分析以及锁的状态](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%20-%20%E5%AF%B9%E8%B1%A1%E5%A4%B4%E5%88%86%E6%9E%90%E4%BB%A5%E5%8F%8A%E9%94%81%E7%8A%B6%E6%80%81.md)
-
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E6%9C%AA%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6(11).png)
 
 5、[多线程和并发](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind)
 
@@ -109,6 +137,12 @@ Spring boot ：加速Web开发的依赖Spring框架的脚手架（约定大于�
 
 Spring Cloud：提供分布式开发各种分布式组件的集成
 
+1）Bean的生命周期
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/Bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.jpg" alt="Bean的生命周期" style="zoom: 50%;" />
+
+
+
 4、ORM框架：
 
 spring-data-jpa:基于 hibernate
@@ -117,12 +151,12 @@ mybatis
 
 5、Collection框架：Map、Collection
 
- 学习过程总结：
+总结：
 
 1、[Mybatis 缓存](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Mybatis%20%E7%BC%93%E5%AD%98.md)
 
 2、[HashMap](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/HashMap.md)
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E8%B4%9F%E8%BD%BD%E5%9B%A0%E5%AD%90%E5%92%8Chash%E5%86%B2%E7%AA%81%E7%8E%87.png)
+
 
 
 ## MySQL 数据库和 SQL
@@ -142,9 +176,15 @@ MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC�
 6、日志文件：undolog（事务的原子性保证、MVCC的实现关键点之一）、 redolog（保证了mysql数据的持久性，采用了内部的XA两阶段提交）、 binlog（主从复制）
 7、读写分离：主从复制（异步复制、半同步复制）
 
-学习过程总结：
+1）MySQL页结构
 
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/MySQL%E9%A1%B5%E7%BB%93%E6%9E%84.png)
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/MySQL%E9%A1%B5%E7%BB%93%E6%9E%84.jpg" style="zoom: 33%;" />
+
+2）主键索引行存储
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E4%B8%BB%E9%94%AE%E7%B4%A2%E5%BC%95%E8%A1%8C%E5%AD%98%E5%82%A8.jpg" style="zoom: 25%;" />
+
+学习过程总结：
 
 1、[SQL事务隔离级别](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/MySQL%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB.md)
 
@@ -159,7 +199,10 @@ MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC�
 ## 分库分表
 
 目前针对分库分表的实践没有参与过，所以只是从概念上去了解了什么时候需要做分库分表以及分库分表过程中需要考虑的事情，针对互联网的架构的演进做了一个流程图，分库分表也是其中一部分。
-![img](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/pic/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96.jpg)
+
+1）互联网架构演化
+
+<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8C%96.jpg" style="zoom:50%;" />
 
 ## RPC和微服务
 
@@ -256,7 +299,7 @@ redis的基础数据：string、hash、list（链表）、set（去重）、sort
 
 5、业界主流的消息中间件：RabbitMQ、ActiveMQ、Kafka、RocketMQ
 
-6、与Spring的整合
+6、与Spring-boot的整合
 
 7、业务场景：电商系统微服务解耦、日志收集、秒杀系统削峰限流、订单过期优惠券过期等延时处理、汇率同步订单状态同步等有规律的定时同步。
 
