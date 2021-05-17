@@ -175,12 +175,13 @@ MVCC：MVCC解决的是不同的事务之间读写版本冲突的问题；MVCC�
 
 6、日志文件：undolog（事务的原子性保证、MVCC的实现关键点之一）、 redolog（保证了mysql数据的持久性，采用了内部的XA两阶段提交）、 binlog（主从复制）
 7、读写分离：主从复制（异步复制、半同步复制）
+1）<img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/MySQL%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%9B%BE.jpg" style="zoom: 33%;" />
 
-1）MySQL页结构
+2）MySQL页结构
 
 <img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/MySQL%E9%A1%B5%E7%BB%93%E6%9E%84.jpg" style="zoom: 33%;" />
 
-2）主键索引行存储
+3）主键索引行存储
 
 <img src="https://sakura521yz.oss-cn-shanghai.aliyuncs.com/java/%E4%B8%BB%E9%94%AE%E7%B4%A2%E5%BC%95%E8%A1%8C%E5%AD%98%E5%82%A8.jpg" style="zoom: 25%;" />
 
