@@ -122,6 +122,8 @@ Thread:start()和run()区别、join（插队）、sleep（抱着锁睡觉）、w
 
 5、[多线程和并发](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%B9%B6%E5%8F%91.xmind)
 
+6、[多线程拒绝策略](https://github.com/sofia2013/JAVA-01/blob/main/Week_15/%E9%83%A8%E5%88%86%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%8B%92%E7%BB%9D%E7%AD%96%E7%95%A5%20RejectedExecutionHandler.md)
+
 **并发编程这一块和JVM是花时间最多的内容，因为抽象+知识点多+日常使用较少，但是我深知想要做高级编程工作，并发编程是入门知识，包括后续中间件和框架的学习，涉及到并发编程中的线程、锁等种种的基础知识，打牢基础，路虽漫漫却定是光明大道。**
 
 
